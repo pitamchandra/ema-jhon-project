@@ -1,0 +1,29 @@
+.header {
+    background-color: #1C2B35;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header img {
+    margin-left: 110px;
+}
+
+.header .nav-item {
+    margin-right: 110px;
+}
+
+.header a {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 20px;
+    letter-spacing: 0.005em;
+    color: #fff;
+    margin-left: 32px;
+}
+.header a:hover{
+    color: orange;
+}
