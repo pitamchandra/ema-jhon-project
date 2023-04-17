@@ -6,6 +6,7 @@ import { AuthContext } from '../../providers/AuthProvider';
 const Login = () => {
     const {signIn} = useContext(AuthContext)
     const [error, setError] = useState('')
+    const [showPass, setShowPass] = useState(false)
     const navigate = useNavigate();
     const location = useLocation()
     const from = location.state?.from?.pathname || '/'
@@ -38,9 +39,12 @@ const Login = () => {
                 </div>
                 <div className="form-control">
                     <label htmlFor="password">Password</label>
-                    <input className='input-field' type="password" name="password" id="password" placeholder='type your password' required />
+                    <input className='input-field' type={showPass ? 'text' : "password"} name="password" id="password" placeholder='type your password' required />
                 </div>
-                <small>show password</small>
+                <div className='show-password'>
+                    <input onClick={()=> setShowPass(!showPass)} type="checkbox" />
+                    <small>  show password</small>
+                </div>
                 <input type="submit" className="submit-btn" value='Login' />
                 <p>
                     <small>New to Ema-Jhon ? <Link to='/register'>Sign Up</Link></small>
