@@ -2,7 +2,7 @@
     padding: 23px;
     background: rgba(255, 153, 0, 0.3);
     position: sticky;
-    top: 0;
+    top: 80px;
 }
 
 .cart p {
@@ -23,4 +23,18 @@
     line-height: 25px;
     letter-spacing: 0.0015em;
     color: #0E161A;
+}
+.delete-cart{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    background-color: #d85d5d;
+    padding: 6px 14px;
+    color: aliceblue;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+.delete-icon{
+    width: 20px;
+    height: 20px;
 }

@@ -1,7 +1,8 @@
 import React from 'react';
 import './Cart.css'
+import { BeakerIcon, TrashIcon } from '@heroicons/react/24/solid'
 
-const Cart = ({cart}) => {
+const Cart = ({cart, handleClearCart, children}) => {
 
     let totalPrice = 0;
     let totalShipping = 0;
@@ -25,6 +26,11 @@ const Cart = ({cart}) => {
             <p>Total Shipping Charge: ${totalShipping}</p>
             <p>Tax: ${tax}</p>
             <h6>Grand Total: ${grandTotal}</h6>
+            <button onClick={handleClearCart} className='delete-cart'>
+                <span>Clear Cart</span>
+                <span className='delete-icon'><TrashIcon /></span>
+            </button>
+            {children}
         </div>
     );
 };

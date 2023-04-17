@@ -1,0 +1,21 @@
+.review-container{
+    margin: 50px auto;
+}
+.checkout{
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    background-color: tomato;
+    border: 1px solid greenyellow;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+
+}
+.checkout a{
+    color: #fff;
+}
+.checkout span{
+    width: 20px;
+
+}
