@@ -10,7 +10,7 @@ const Orders = () => {
     const savedCart = useLoaderData();
     const [cart, setCart] = useState(savedCart);
     const handleRemoveCart = (id) =>{
-        const remaining = cart.filter(pd => pd.id !== id)
+        const remaining = cart.filter(pd => pd._id !== id)
         setCart(remaining)
         removeFromDb(id)
     }
@@ -25,7 +25,7 @@ const Orders = () => {
             <div className='review-container'>
                 {
                     cart.map(review => <ReviewCart
-                        key={review.id}
+                        key={review._id}
                         review= {review}
                         handleRemoveCart = {handleRemoveCart}
                     ></ReviewCart>)
